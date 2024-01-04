@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ShowPosts;
+use App\Http\Controllers\Admin\AdminPosts;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+//Route::get('/post', function (){
+//    return view('fff');
+//});
+Route::get('/',
+    [
+        ShowPosts::class, 'main',
+    ]
+);
+//Route::get('/', function (){
+//   return view ('menu');
+//});
+
+Route::get('/admin',
+    [
+        AdminPosts::class, 'index',
+    ]
+);
+//Route::post('/posts', [AdminPosts::class, 'store']);
