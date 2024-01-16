@@ -1,15 +1,15 @@
 h1, h2 {
-    color: #333333;
+  color: #333333;
 }
 
 * {
-    color: #111;
+  color: #111;
 }
 
 .position_block {
-    padding: 10% 20%;
+  padding: 10% 20%;
 }
 
 .article_content {
-    display: flex;
+  display: flex;
 }
